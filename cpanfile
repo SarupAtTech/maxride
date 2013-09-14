@@ -12,6 +12,13 @@ requires 'Teng'                           , '0.18';
 requires 'Test::WWW::Mechanize::PSGI'     , '0';
 requires 'Time::Piece'                    , '1.20';
 
+on 'develop' => sub {
+    requires 'Module::Install';
+    requires 'Module::Install::CPANfile';
+    requires 'Module::Install::AuthorTests';
+    requires 'Module::Install::Repository';
+};
+
 on 'configure' => sub {
    requires 'Module::Build', '0.38';
    requires 'Module::CPANfile', '0.9010';

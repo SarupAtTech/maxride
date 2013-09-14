@@ -2,3 +2,6 @@ language: perl
 perl:
   - 5.16
   - 5.14
+install: cpanm --with-develop --installdeps --notest .
+script:
+  perl Build.PL && ./Build build && cover -test -report coveralls
